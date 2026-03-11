@@ -25,7 +25,7 @@ jobs:
         run: pip install --upgrade pandas yfinance openpyxl
 
       - name: Run portfolio updater
-        run: python update_japan_portfolio.py
+        run: python updater.py
 
       - name: Commit and push updated CSVs
         run: |
