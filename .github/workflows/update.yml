@@ -24,9 +24,15 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pandas yfinance openpyxl
+          
+      - name: Debug repo path
+        run: |
+         pwd
+         ls -la
 
       # Step 4: run Python script
       - name: Run portfolio updater
+      
         run: python updater.py
 
       # Step 5: commit and push updated CSVs
