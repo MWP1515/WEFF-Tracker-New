@@ -36,10 +36,14 @@ jobs:
         run: python updater.py
 
       # Step 5: commit and push updated CSVs
-      - name: Commit updated CSVs
+      - name: Commit and push updated CSVs
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
           git add prices_history.csv portfolio_value_history.csv
-          git commit -m "Hourly update Japan portfolio"
+          git commit -m "Hourly update Japan portfolio" || echo "No changes to commit"
           git push
+        env:
+          # Use the automatically provided token for authentication
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
