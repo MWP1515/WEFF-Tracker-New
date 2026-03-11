@@ -4,9 +4,11 @@ on:
 
 
   workflow_dispatch:
-  push:
+
   schedule:
     - cron: "0 * * * *"  # every hour
+
+    
 
 jobs:
   update:
