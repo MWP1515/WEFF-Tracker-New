@@ -1,9 +1,12 @@
 name: Update Japan Portfolio Hourly
 
 on:
+
+
+  workflow_dispatch:
+  push:
   schedule:
     - cron: "0 * * * *"  # every hour
-  workflow_dispatch:
 
 jobs:
   update:
