@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: "0 * * * *"  # every hour
+    - cron: "15,45 * * * *"  
 
     
 
